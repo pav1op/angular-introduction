@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PersonTableComponent } from './components/person-table/person-table.component';
+import { Person } from './shared/interfaces/person';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,22 @@ import { PersonTableComponent } from './components/person-table/person-table.com
 })
 export class AppComponent {
   name = 'Pavo';
+
+  person0: Person = {
+    givenName: 'Pvl',
+    surName: 'P',
+    age: 2,
+    email: 'p@aueb.gr',
+    address: 'Athens, Grecce',
+  };
+
+  person1: Person = {
+    givenName: 'Takis',
+    surName: 'Tsoukalas',
+    age: 63,
+    email: 'takis7@aueb.gr',
+    address: 'Antegeia, Grecce',
+  };
 
   
 }
