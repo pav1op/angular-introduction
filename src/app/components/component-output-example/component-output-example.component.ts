@@ -60,5 +60,6 @@ class PersonDialogComponent {
         public dialogRef: DialogRef,
         @Inject(DIALOG_DATA) public person: EPerson,
       ) {}
+  
     
 }
