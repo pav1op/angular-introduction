@@ -13,10 +13,9 @@ import { SimpleDatatableComponent } from '../simple-datatable/simple-datatable.c
     SimpleDatatableComponent,
   ],
   templateUrl: './template-driven-form-example.component.html',
-  styleUrl: './template-driven-form-example.component.css'
+  styleUrl: './template-driven-form-example.component.css',
 })
 export class TemplateDrivenFormExampleComponent {
-
   currentPerson: EPerson;
   persons: EPerson[] = [];
 
