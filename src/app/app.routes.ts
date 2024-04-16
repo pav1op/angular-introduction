@@ -10,6 +10,8 @@ import { TemplateDrivenFormExampleComponent } from './components/template-driven
 import { ReactiveFormExampleComponent } from './components/reactive-form-example/reactive-form-example.component';
 import { HttpClientExampleComponent } from './components/http-client-example/http-client-example.component';
 import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
+import { authGuard } from './shared/guards/auth.guard';
+import { UserLoginComponent } from './components/user-login/user-login.component';
 
 export const routes: Routes = [
     {path: 'component-input-example', component: ComponentInputExampleComponent},
@@ -24,6 +26,8 @@ export const routes: Routes = [
       },
     {path: 'http-client-example', component: HttpClientExampleComponent},
     {path: 'user-registration-example', component: UserRegistrationComponent},
+    {path: 'restricted-content-example', component: ReactiveFormExampleComponent, canActivate: [authGuard]},
+    {path: 'login', component: UserLoginComponent},
     {path: '', component: WelcomeComponent },
     
 ];
