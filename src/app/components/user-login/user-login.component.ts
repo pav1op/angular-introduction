@@ -24,7 +24,7 @@ export class UserLoginComponent {
   });
 
   onSubmit() {
-    const credentials = this.form.value as Credentials
+    const credentials = this.form.value as Credentials;
     this.userService.loginUser(credentials).subscribe({
       next: (response) => {
         const access_token = response.access_token;
