@@ -13,6 +13,11 @@ import { UserRegistrationComponent } from './components/user-registration/user-r
 import { authGuard } from './shared/guards/auth.guard';
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { FunForNerdsComponent } from './components/fun-for-nerds/fun-for-nerds/fun-for-nerds.component';
+import { CrudDashboardComponent } from './components/crud/crud-dashboard-example/crud-dashboard-example.component';
+import { CrudDeleteExampleComponent } from './components/crud/crud-delete-example/crud-delete-example.component';
+import { CrudCreateExampleComponent } from './components/crud/crud-create-example/crud-create-example.component';
+import { CrudReadExampleComponent } from './components/crud/crud-read-example/crud-read-example.component';
+import { CrudUpdateExampleComponent } from './components/crud/crud-update-example/crud-update-example.component';
 
 export const routes: Routes = [
     {path: 'component-input-example', component: ComponentInputExampleComponent},
@@ -30,6 +35,27 @@ export const routes: Routes = [
     {path: 'restricted-content-example', component: ReactiveFormExampleComponent, canActivate: [authGuard]},
     {path: 'login', component: UserLoginComponent},
     {path: 'fun-for-nerds', component: FunForNerdsComponent},
+    {path: 'crud-example', component: CrudDashboardComponent, canActivate: [authGuard],},
+    {
+      path: 'crud-example/create',
+      component: CrudCreateExampleComponent,
+      canActivate: [authGuard],
+    },
+    {
+      path: 'crud-example/read',
+      component: CrudReadExampleComponent,
+      canActivate: [authGuard],
+    },
+    {
+      path: 'crud-example/update',
+      component: CrudUpdateExampleComponent,
+      canActivate: [authGuard],
+    },
+    {
+      path: 'crud-example/delete',
+      component: CrudDeleteExampleComponent,
+      canActivate: [authGuard],
+    },
     {path: '', component: WelcomeComponent },
     
 ];
